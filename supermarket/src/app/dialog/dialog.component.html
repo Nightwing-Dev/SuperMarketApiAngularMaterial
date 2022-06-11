@@ -1,23 +1,41 @@
 <h1 mat-dialog-title> Agregar Productos </h1>
-<div mat-dialog-content>
+<div mat-dialog-content class="mat-dialog">
     <mat-form-field appearance="outline">
-        <mat-label>Agrega Tu credencial</mat-label>
+        <mat-label>Escribe tu producto</mat-label>
         <input matInput placeholder="">
-        <mat-icon matSuffix>input</mat-icon>
     </mat-form-field>
     <mat-form-field appearance="outline">
-        <mat-label>Agrega Tu credencial</mat-label>
+        <mat-label>Categoria</mat-label>
         <mat-select placeholder="Categoria">
-            <mat-option value="Fruits">Fruits</mat-option>
+            <mat-option value="Fruits">Frutas</mat-option>
             <mat-option value="Vegetables">Vegetables</mat-option>
             <mat-option value="Electronics">Electronica</mat-option>
         </mat-select>
     </mat-form-field>
     <mat-form-field appearance="outline">
-        <mat-label>Choose a date</mat-label>
+        <mat-label>Elige Una Fecha</mat-label>
         <input matInput [matDatepicker]="picker">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-      
+    </mat-form-field>
+    <mat-label>
+        <h1>Selecciona su Estado</h1>
+    </mat-label>
+    <mat-radio-group class="example-radio-group">
+        <mat-radio-button class="example-radio-button" *ngFor="let articulo of articulos" [value]="articulo">
+            {{articulo}}
+        </mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field appearance="outline">
+        <mat-label>Precio</mat-label>
+        <input matInput type="number" placeholder="">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Comentarios</mat-label>
+        <textarea matInput></textarea>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="accent" mat-dialog-close>Cerrar</button>
+    <button class="btn-style" mat-raised-button color="primary" mat-dialog-close>Guardar</button>
 </div>
