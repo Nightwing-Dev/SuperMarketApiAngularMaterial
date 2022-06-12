@@ -1,0 +1,32 @@
+{
+  "productList": [
+    {
+      "productName": "Iphone perdido",
+      "category": "Electronics",
+      "stade": "Articulo Usado",
+      "price": 3466,
+      "comments": "se perdio el iphone",
+      "date": "2022-06-21T05:00:00.000Z",
+      "id": 1
+    },
+    {
+      "productName": "Zanahoria",
+      "category": "Vegetables",
+      "stade": "Articulo nuevo",
+      "price": 34,
+      "comments": "Hortaliza bonita",
+      "date": "2016-03-11T05:00:00.000Z",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
