@@ -17,6 +17,15 @@
       "comments": "Hortaliza bonita",
       "date": "2016-03-11T05:00:00.000Z",
       "id": 2
+    },
+    {
+      "productName": "Piranha muerta",
+      "category": "Vegetables",
+      "stade": "Articulo nuevo",
+      "price": 333,
+      "comments": "aaaaaaaaaaaaaaaaaaaaaaaa",
+      "date": "2022-06-14T05:00:00.000Z",
+      "id": 3
     }
   ],
   "comments": [
