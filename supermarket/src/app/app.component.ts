@@ -12,7 +12,7 @@ import { MatSort } from '@angular/material/sort';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  displayedColumns: string[] = ['productName', 'category', 'stade', 'price', 'comments', 'date'];
+  displayedColumns: string[] = ['productName', 'category', 'stade', 'price', 'comments', 'date', 'action'];
   dataSource!: MatTableDataSource<any>;
   title = 'supermarket';
 
@@ -42,6 +42,12 @@ export class AppComponent implements OnInit {
         alert("tu aplicacion falla de maneras increibles");
       }
     });
+  }
+  editProduct(element: any){
+    this.dialog.open(DialogComponent,{
+      width:'30%',
+      data: element
+    })
   }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

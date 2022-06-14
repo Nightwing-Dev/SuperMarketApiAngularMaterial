@@ -44,6 +44,24 @@
       "comments": "Escucha musica gratis ",
       "date": "2022-06-17T05:00:00.000Z",
       "id": 5
+    },
+    {
+      "productName": "LLavero De Hello Kitty",
+      "category": "Electronics",
+      "stade": "Articulo Reacondicionado",
+      "price": 10,
+      "comments": "Articulo que pertenecio a una persona famosa",
+      "date": "2021-10-13T05:00:00.000Z",
+      "id": 6
+    },
+    {
+      "productName": "Xiaomi Samsui con TV Roku",
+      "category": "Electronics",
+      "stade": "Articulo Usado",
+      "price": 3455555,
+      "comments": "Articulo chafa encontrado en el coppel",
+      "date": "2016-06-10T05:00:00.000Z",
+      "id": 7
     }
   ],
   "comments": [
