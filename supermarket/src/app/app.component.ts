@@ -20,7 +20,9 @@ export class AppComponent implements OnInit {
   @ViewChild(MatSort) sort!: MatSort;
 
   constructor(private dialog: MatDialog, private apiSvc: ApiService) {
+
   }
+
   ngOnInit(): void {
     this.getAllProducts();
   }

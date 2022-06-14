@@ -26,24 +26,6 @@
       "comments": "animal",
       "date": "2022-06-14T05:00:00.000Z",
       "id": 3
-    },
-    {
-      "productName": "Arroz Con Leche",
-      "category": "Fruits",
-      "stade": "Articulo nuevo",
-      "price": 3444,
-      "comments": "arroz con leche que te da diarrea ",
-      "date": "2022-06-03T05:00:00.000Z",
-      "id": 4
-    },
-    {
-      "productName": "Mp4 Estereo",
-      "category": "Electronics",
-      "stade": "Articulo Usado",
-      "price": 4555,
-      "comments": "Escucha musica gratis ",
-      "date": "2022-06-17T05:00:00.000Z",
-      "id": 5
     }
   ],
   "comments": [
