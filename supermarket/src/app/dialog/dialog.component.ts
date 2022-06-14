@@ -13,7 +13,8 @@ export class DialogComponent implements OnInit {
   articulos = ["Articulo nuevo", "Articulo Usado", "Articulo Reacondicionado"]
 
   productForm!: FormGroup;
-  constructor(private formBuilders: FormBuilder, 
+  actionBtn: string = "Guardar";
+  constructor(private formBuilders: FormBuilder,
     @Inject(MAT_DIALOG_DATA) public editData: any,
     private apiSvc: ApiService, private dialogRef: MatDialogRef<DialogComponent>) { }
 
@@ -27,21 +28,37 @@ export class DialogComponent implements OnInit {
       date: ['', Validators.required]
     });
 
-    console.log(this.editData);
+    if (this.editData) {
+      this.actionBtn = "Actualizar";
+      this.productForm.controls['productName'].setValue(this.editData.productName);
+      this.productForm.controls['category'].setValue(this.editData.category);
+      this.productForm.controls['stade'].setValue(this.editData.stade);
+      this.productForm.controls['price'].setValue(this.editData.price);
+      this.productForm.controls['comments'].setValue(this.editData.comments);
+      this.productForm.controls['date'].setValue(this.editData.date);
+    }
   }
   addProduct() {
-    if (this.productForm.valid) {
-      this.apiSvc.postProduct(this.productForm.value).subscribe({
-        next: (res) => {
-          alert("producto agregado correctamente mi perro");
-          this.productForm.reset();
-          this.dialogRef.close('guardar');
-        },
-        error: () => {
-          alert("error aplicacion fallando destruccion inminente")
-        }
-      })
+    if (!this.editData) {
+      if (this.productForm.valid) {
+        this.apiSvc.postProduct(this.productForm.value).subscribe({
+          next: (res) => {
+            alert("producto agregado correctamente mi perro");
+            this.productForm.reset();
+            this.dialogRef.close('guardar');
+          },
+          error: () => {
+            alert("error aplicacion fallando destruccion inminente")
+          }
+        })
+      }
+
+    } else {
+      this.updateProduct();
     }
+  }
+  updateProduct() {
+
   }
 }
 

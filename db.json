@@ -98,6 +98,24 @@
       "comments": "Para que puedas falsificar tu vida mejor ",
       "date": "2022-06-10T05:00:00.000Z",
       "id": 11
+    },
+    {
+      "productName": "Iphone perdido",
+      "category": "Electronics",
+      "stade": "Articulo Usado",
+      "price": 3466,
+      "comments": "iphone perteneciente a Michael Jackson",
+      "date": "2022-06-21T05:00:00.000Z",
+      "id": 12
+    },
+    {
+      "productName": "Iphone perdido",
+      "category": "Electronics",
+      "stade": "Articulo Usado",
+      "price": 3466,
+      "comments": "se perdio el iphonee",
+      "date": "2022-06-21T05:00:00.000Z",
+      "id": 13
     }
   ],
   "comments": [
