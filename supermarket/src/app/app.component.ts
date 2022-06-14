@@ -29,6 +29,10 @@ export class AppComponent implements OnInit {
   openDialog() {
     this.dialog.open(DialogComponent, {
       width: '30%'
+    }).afterClosed().subscribe(val => {
+      if (val === 'guardar') {
+        this.getAllProducts();
+      }
     });
   }
   getAllProducts() {
@@ -43,10 +47,25 @@ export class AppComponent implements OnInit {
       }
     });
   }
-  editProduct(element: any){
-    this.dialog.open(DialogComponent,{
-      width:'30%',
+  editProduct(element: any) {
+    this.dialog.open(DialogComponent, {
+      width: '30%',
       data: element
+    }).afterClosed().subscribe(val => {
+      if (val === 'actualizar') {
+        this.getAllProducts();
+      }
+    });
+  }
+  deleteProduct(id:number) {
+    this.apiSvc.delete(id).subscribe({
+      next:(res)=>{
+        alert("tu producto fue eliminado, espero no te arrepientas o si ?");
+        this.getAllProducts();
+      },
+      error:()=>{
+        alert("error borrando tu producto");
+      }
     })
   }
   applyFilter(event: Event) {
@@ -57,4 +76,5 @@ export class AppComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
+  refresh(): void { window.location.reload(); }
 }

@@ -29,7 +29,7 @@ export class DialogComponent implements OnInit {
     });
 
     if (this.editData) {
-      this.actionBtn = "Actualizar";
+      this.actionBtn = "actualizar";
       this.productForm.controls['productName'].setValue(this.editData.productName);
       this.productForm.controls['category'].setValue(this.editData.category);
       this.productForm.controls['stade'].setValue(this.editData.stade);
@@ -50,15 +50,23 @@ export class DialogComponent implements OnInit {
           error: () => {
             alert("error aplicacion fallando destruccion inminente")
           }
-        })
+        });
       }
-
     } else {
       this.updateProduct();
     }
   }
   updateProduct() {
-
+    this.apiSvc.putProduct(this.productForm.value, this.editData.id).subscribe({
+      next: (res) => {
+        alert("producto actualizado de manera correcta");
+        this.productForm.reset();
+        this.dialogRef.close('actualizar');
+      },
+      error:()=>{
+        alert("tu aplicacion esta apunto de destruirse");
+      }
+    });
   }
 }
 

@@ -56,10 +56,10 @@
           <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef> Ajustes </th>
             <td mat-cell *matCellDef="let element">
-              <button mat-icon-button (click)="editProduct(element)" color="primary">
+              <button mat-icon-button (click)="editProduct(element)"color="primary">
                 <mat-icon>edit</mat-icon>
               </button>
-              <button mat-icon-button color="accent">
+              <button (click)="deleteProduct(element.id)" mat-icon-button color="accent">
                 <mat-icon>delete</mat-icon>
               </button>
 
