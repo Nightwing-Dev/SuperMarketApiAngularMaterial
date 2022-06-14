@@ -62,6 +62,42 @@
       "comments": "Articulo chafa encontrado en el coppel",
       "date": "2016-06-10T05:00:00.000Z",
       "id": 7
+    },
+    {
+      "productName": "Bandeja De Fresas Podridas",
+      "category": "Fruits",
+      "stade": "Articulo Usado",
+      "price": 1,
+      "comments": "Un articulo en mal estado, increible que aun se conserve ",
+      "date": "1896-07-02T04:56:16.000Z",
+      "id": 8
+    },
+    {
+      "productName": "Nenuco Paranormal Poseido ",
+      "category": "Electronics",
+      "stade": "Articulo Reacondicionado",
+      "price": 45678,
+      "comments": "Esta Poseido ",
+      "date": "2021-10-31T05:00:00.000Z",
+      "id": 9
+    },
+    {
+      "productName": "Metanfetamina Marca Heissenberg",
+      "category": "Electronics",
+      "stade": "Articulo Usado",
+      "price": 4454554,
+      "comments": "Es la de la serie autentica, pertenecio a Gustavo fring",
+      "date": "2006-04-14T05:00:00.000Z",
+      "id": 10
+    },
+    {
+      "productName": "Documento pirata ",
+      "category": "Electronics",
+      "stade": "Articulo nuevo",
+      "price": 2345,
+      "comments": "Para que puedas falsificar tu vida mejor ",
+      "date": "2022-06-10T05:00:00.000Z",
+      "id": 11
     }
   ],
   "comments": [

@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from '../services/api.service';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dialog',
@@ -13,7 +13,9 @@ export class DialogComponent implements OnInit {
   articulos = ["Articulo nuevo", "Articulo Usado", "Articulo Reacondicionado"]
 
   productForm!: FormGroup;
-  constructor(private formBuilders: FormBuilder, private apiSvc: ApiService, private dialogRef: MatDialogRef<DialogComponent>) { }
+  constructor(private formBuilders: FormBuilder, 
+    @Inject(MAT_DIALOG_DATA) public editData: any,
+    private apiSvc: ApiService, private dialogRef: MatDialogRef<DialogComponent>) { }
 
   ngOnInit(): void {
     this.productForm = this.formBuilders.group({
@@ -23,7 +25,9 @@ export class DialogComponent implements OnInit {
       price: ['', Validators.required],
       comments: ['', Validators.required],
       date: ['', Validators.required]
-    })
+    });
+
+    console.log(this.editData);
   }
   addProduct() {
     if (this.productForm.valid) {
